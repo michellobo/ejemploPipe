@@ -10,7 +10,7 @@ pipeline {
 
         stage('test') {
             steps {
-                sh "/usr/share/maven/mvn compile"
+                sh "mvn compile"
             }
         }
 
