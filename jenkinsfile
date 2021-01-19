@@ -4,20 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "/usr/local/opt/maven/bin/mvn clean"
+                sh "mvn clean"
             }
         }
 
         stage('test') {
             steps {
-                sh "/usr/local/opt/maven/bin/mvn compile"
+                sh "mvn compile"
             }
         }
 
         stage('test2') {
             steps {
                 sh '''
-                    /usr/local/opt/maven/bin/mvn test
+                    mvn test
                 '''
             }
         }
